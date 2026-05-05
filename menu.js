@@ -1,6 +1,6 @@
 
 const menu = {
-    entreesgg: [
+    entrees: [
         {
             nom: "Alloco",
             prix: 4,
