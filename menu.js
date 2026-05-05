@@ -1,6 +1,6 @@
-// 📦 Données du menu
+
 const menu = {
-    entrees: [
+    entreesgg: [
         {
             nom: "Alloco",
             prix: 4,
@@ -141,16 +141,15 @@ const menu = {
     ]
 };
 
-// Etat de la commande
+
 let commande = [];
 let total = 0;
 
-//  Point d'entrée
 function init() {
     afficherEtape("Entrées", menu.entrees, passerAuxDesserts);
 }
 
-//  Fonctions de navigation
+
 function passerAuxDesserts() {
     afficherEtape("Desserts", menu.desserts, passerAuxBoissons);
 }
@@ -159,11 +158,11 @@ function passerAuxBoissons() {
     afficherEtape("Boissons", menu.boissons, afficherResume);
 }
 
-//  Affichage d'une étape
+
 function afficherEtape(titre, items, prochaineEtape) {
     const container = document.getElementById("menu");
 
-    // Reset
+    
     container.innerHTML = "";
 
 
