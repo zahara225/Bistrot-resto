@@ -1,0 +1,142 @@
+.carre{
+    border: 2px solid red;
+    height: 600px;
+    background-image: url(https://cdn.pixabay.com/photo/2018/06/01/22/06/dishes-of-food-3447292_1280.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+h1{
+    margin-bottom: 4px;
+    font-size: x-large;
+}
+h2{
+    margin-bottom: 4px;
+    font-size: x-large;
+    font-style: oblique;
+}
+p{
+    margin-top: 0%;
+    font-style: unset;
+    font-size:xx-small;
+}
+.carre h1{
+    color: white;
+    font-size: 80px;
+    text-shadow: 2px 2px 4px black;
+}
+.carre h2{
+    color: white;
+    font-size: 40px;
+    text-shadow: 2px 2px 4px black;
+}
+
+/* Style de base (mobile first) */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+.carre {
+  background-color: #fff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.text {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+h2 {
+  font-size: 1rem;
+  color: #666;
+}
+
+
+/* Style de base (mobile first) */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+.carre {
+  background-color: #fff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.text {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+h2 {
+  font-size: 1rem;
+  color: #666;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+@media (min-width: 768px) {
+  .carre {
+    margin: 40px auto;
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carre {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 360) {
+    .carre{
+        width: 50%;
+    }
+    h1 {
+        font-size: 2.4rem; 
+    }
+    h2{
+        font-size: 1.2rem;
+    }
+    
+}
+
