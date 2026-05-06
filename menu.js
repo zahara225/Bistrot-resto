@@ -4,7 +4,7 @@ const menu = {
         {
             nom: "Alloco",
             prix: 4,
-            description: "Banane plantain frite, croustillante",
+            description: "Banane plantain frit, croustillante",
             image: "https://i.pinimg.com/originals/dc/84/93/dc849346deecc3bbbab289531523486a.jpg"
         },
         {
@@ -14,7 +14,7 @@ const menu = {
             image: "https://i.pinimg.com/474x/0a/e7/36/0ae73658a88fac1c18211c498a9009e3.jpg"
         },
         {
-            nom:" spaghrttis bologaise",
+            nom:" spaghettis bolognaise",
             prix: 10,
             description: "Pates accompagnées d'une sauce tomate à la viande.Classique Italien",
             image:"https://tse4.mm.bing.net/th/id/OIP.k8XKkoMFZl8x7c64r6k5FQHaE9?rs=1&pid=ImgDetMain&o=7&rm=3"
@@ -22,31 +22,32 @@ const menu = {
         {
             nom:"Steak Frites",
             prix: 11.80,
-            description:"Steak grillé servi avec des frites ceoustillantes",
+            description:"Steak grillé servi avec des frites croustillantes",
             image:"https://www.rockrecipes.com/wp-content/uploads/2018/02/Steak-Frites-close-up-photo-of-single-serving-on-white-plate.jpg"
         },
         {
             nom:"Poulet braisé",
             prix:12,
-            description:"Poulet mariné au epices puis grillé",
+            description:"Poulet mariné aux epices puis grillé",
             image:"https://tse1.mm.bing.net/th/id/OIP.l9O74_wCNuF8QIt7_BTB6wHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
         },
         {
             nom:"soupe aux légumes",
             prix: 8,
+            description:"à base de poireaux, carottes et pommes de terre",
             image:"https://cdn.pixabay.com/photo/2016/06/01/21/40/soup-1429793_1280.jpg"
         },
         {
             nom:"Couscous",
             prix: 12,
-            description:"semoule de blé dur arrosée de bouillon de garnie de viande et de légumes",
+            description:"semoule de blé dur arrosée de bouillon , garnie de viande et de légumes",
             image:"https://th.bing.com/th/id/R.e1231bc8ce01255d3a6df94d6050a6b0?rik=4C0f9YvyvcDN5g&riu=http%3a%2f%2fcdn.shopify.com%2fs%2ffiles%2f1%2f0006%2f2701%2f5745%2farticles%2fcouscous-algerien-marocain-tunisien-recette-preparation_1024x1024.jpg%3fv%3d1679757149&ehk=Q4myebqN8z8LhBdKB8Vut9NKK9k4g64EzrAU4ShXIEg%3d&risl=&pid=ImgRaw&r=0"
 
         },
         {
             nom:"Salade",
             prix:20,
-            description:" salade accompagné de poulet et des frites",
+            description:" salade composé de poulet accompagné et des frites",
             image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKWG03yJiw12v1IVKK8GntbAMtleJjSn9vfA&s"
         }
 
