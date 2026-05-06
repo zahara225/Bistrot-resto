@@ -1,0 +1,13 @@
+main{ 
+    box-sizing: border-box;
+    width: 600px;
+    margin: 25% 25% 30% 30%;  /* top right bottom left (sens horaire) */
+    padding: 25px 20px 25px 25px ;
+    border: 3px solid;
+}
+
+legend {
+  background-color: black;
+  color: white;
+  padding: 3px 6px;
+}
