@@ -16,13 +16,14 @@ const dishes = [
   { cat: 'plat',    nom: 'Steak Frites',      prix: 13,    description: 'Steak grillé servi avec des frites croustillantes.',                                          image: 'https://www.rockrecipes.com/wp-content/uploads/2018/02/Steak-Frites-close-up-photo-of-single-serving-on-white-plate.jpg',                                                                                                                                    tags: ['sg','vege'] },
   { cat: 'plat',    nom: 'Foutou banane',        prix: 11,    description: 'pâte lisse et élastique préparée à partir de banane plantain, d\'igname ou de manioc, souvent servie avec une sauce riche et épicée comme la sauce graine, la sauce arachide ou la sauce gombo.',               image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlrWx-rCPLeQV3gJbdZJ7rZovR8sSVtmPSbw&s',                                                                                                                                   tags: ['vege', 'sg'] },
   {cat: 'plat',  nom:'Paella',   prix: 12,  description: 'plat de riz cuisiné avec des fruits de mer, du poulet, des légumes et du safran',     image:'https://assets.afcdn.com/recipe/20190827/96838_w1024h1024c1cx2100cy1400cxt0cyt0cxb4200cyb2800.jpg',   tags:['sg']},
-  // ── DESSERTS (4) ─────────────────────────────────────
+   
+
   { cat: 'dessert', nom: 'Dégué',                prix: 10,    description: 'Dessert West-Africain à base de couscous de mil, yaourt et sucre.',                       image: 'https://img.freepik.com/photos-gratuite/vue-face-du-delicieux-dessert-sain_23-2148579386.jpg?semt=ais_hybrid&w=740&q=80',                                                                               tags: ['vege', 'sg'] },
   { cat: 'dessert', nom: 'Gnonmi',               prix: 5.60,  description: 'Galettes à base de farine de riz ou mil, accompagnées de lait sucré.',                   image: 'https://kelianfood.com/wp-content/uploads/2022/09/Gnomi-by-kelianfood.png',                                                                                                                                  tags: ['vege', 'sg'] },
   { cat: 'dessert', nom: 'Tiramisu fruits rouges',prix: 18,   description: 'Biscuits imbibés, crème mascarpone vanillée, framboises et fraises.',                     image: 'https://media.houra.fr/images/widget/recette/gd_recette_TiramisuFruit.jpg',                                                                                                                                  tags: ['vege'] },
   { cat: 'dessert', nom: 'Panna cotta mangue',   prix: 11,    description: 'Panna cotta au lait de coco, onctueuse, recouverte d\'un coulis de mangue fraîche.',      image: 'https://kara-coconut.fr/wp-content/uploads/2019/04/Panna-Cotta-exotique-noix-de-coco-et-mangue.jpg',                                                                                                           tags: ['vege', 'sg'] },
 
-  // ── BOISSONS (3) ─────────────────────────────────────
+
   { cat: 'boisson', nom: 'Jus de bissap',        prix: 2.5,   description: 'Boisson rafraîchissante à base de fleurs d\'hibiscus séchées.',                           image: 'https://cdn.aistoucuisine.com/assets/5524ef09-bb82-4de2-908f-040f2b1614d0/jus-bissap',                                                                                                                tags: ['vege', 'sg'] },
   { cat: 'boisson', nom: 'Gnamankoudji',         prix: 2.5,   description: 'Boisson tonique et épicée à base de gingembre frais.',                                    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTEizJXNKQkuIEBQnpEUHRM-hRRL8IEBIRKWsOy2uvrBSK23jeQIaPkTp8Zc9X5Ouyz3gL6NhIPRWsqvO5wS3y16ZhwOpt6V53mOGRjF8&s=10',                            tags: ['vege', 'sg', 'epice'] },
   { cat: 'boisson', nom: 'Menthe au lait',       prix: 2.5,   description: 'Boisson douce et fraîche à base de menthe et de lait.',                                   image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfuPMD25DvQ9eaFK_xo_rjzhY_XjGfy7WjDQ&s',                                                                                                           tags: ['vege'] },
@@ -30,16 +31,12 @@ const dishes = [
   { cat:'boisson', nom: 'Eau', prix:2, description:'eau mnérale',  image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiXNlNqrmJzcjbOH5PP0gPVpPpf7XlBDbhcg&s', tags:[]},
 ];
 
-// ══════════════════════════════════════════════════════
-//  ÉTAT DES FILTRES
-// ══════════════════════════════════════════════════════
+
 let activeCat  = 'all';
 let filterVege = false;
 let filterSG   = false;
 
-// ══════════════════════════════════════════════════════
-//  CONSTRUCTION DU HTML DE BASE
-// ══════════════════════════════════════════════════════
+
 function buildUI() {
   const container = document.getElementById('menu');
   container.innerHTML = `
@@ -92,9 +89,7 @@ function buildUI() {
   `;
 }
 
-// ══════════════════════════════════════════════════════
-//  CRÉATION DES CARTES
-// ══════════════════════════════════════════════════════
+
 function renderTags(tags) {
   return (tags || []).map(t => {
     if (t === 'vege')  return `<span class="tag tag-vege">🌿 Végé</span>`;
@@ -133,9 +128,7 @@ function populateGrids() {
   dishes.forEach(dish => grids[dish.cat].appendChild(buildCard(dish)));
 }
 
-// ══════════════════════════════════════════════════════
-//  FILTRAGE CUMULATIF
-// ══════════════════════════════════════════════════════
+
 function applyFilters() {
   const cards = document.querySelectorAll('.card');
   let visible = 0;
@@ -151,7 +144,7 @@ function applyFilters() {
 
     if (show) {
       card.classList.remove('card-hidden');
-      // Redémarre l'animation de fondu
+      
       card.style.animation = 'none';
       card.offsetHeight; // reflow
       card.style.animation = '';
@@ -161,14 +154,14 @@ function applyFilters() {
     }
   });
 
-  // Compteur avec effet de rebond
+  
   const num = document.getElementById('compteur-num');
   num.classList.remove('bounce');
   num.offsetHeight;
   num.classList.add('bounce');
   num.textContent = visible;
 
-  // Afficher/masquer les titres de section vides
+  
   document.querySelectorAll('.section-group').forEach(sec => {
     const a = sec.querySelectorAll('.card:not(.card-hidden)').length > 0;
     sec.style.display = a ? '' : 'none';
@@ -177,11 +170,9 @@ function applyFilters() {
   document.getElementById('empty-state').style.display = visible === 0 ? 'block' : 'none';
 }
 
-// ══════════════════════════════════════════════════════
-//  ÉVÉNEMENTS
-// ══════════════════════════════════════════════════════
+
 function bindEvents() {
-  // Boutons de catégorie
+  
   document.getElementById('cat-buttons').addEventListener('click', e => {
     const btn = e.target.closest('.cat-btn');
     if (!btn) return;
@@ -191,7 +182,7 @@ function bindEvents() {
     applyFilters();
   });
 
-  // Cases à cocher
+  
   document.getElementById('filter-vege').addEventListener('change', e => {
     filterVege = e.target.checked;
     applyFilters();
@@ -202,9 +193,6 @@ function bindEvents() {
   });
 }
 
-// ══════════════════════════════════════════════════════
-//  INIT
-// ══════════════════════════════════════════════════════
 function init() {
   buildUI();
   populateGrids();
