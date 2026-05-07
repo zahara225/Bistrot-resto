@@ -73,7 +73,7 @@ Bistrot-resto/
 
 ---
 
-## 🔀Workflow Git
+## Workflow Git
 
 Le projet utilise une branche par développeur. Les modifications passent par une **Pull Request** vers `dev` avant d'être mergées.
 
