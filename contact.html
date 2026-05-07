@@ -100,21 +100,90 @@ iframe {
 
 </style>
 
+
+ <link rel="stylesheet" href="index.css">
 </head>
 <body>
+ 
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+ 
+  <!-- Nav -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">Le Bistro du Croisé</a>
+    <ul class="nav-links">
+      <li><a href="menu.html">Menus</a></li>
+      <li><a href="galerie.html">Photos</a></li>
+      <li><a href="avis.html">Avis</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="reservation.html" class="nav-cta">Réserver</a>
+    <button class="nav-burger" id="burgerBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+ 
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <a href="menu.html" onclick="closeMobile()">Menus</a>
+    <a href="galerie.html" onclick="closeMobile()">Photos</a>
+    <a href="avis.html" onclick="closeMobile()">Avis</a>
+    <a href="contact.html" onclick="closeMobile()">Contact</a>
+    <a href="reservation.html" class="btn-primary" style="font-size:0.8rem">Réserver une table</a>
+  </div>
 
-<h1>Contact</h1>
+
+  <!-- Horaires & Infos -->
+  <section class="infos-section" id="infos">
+    <div class="reveal">
+      <p class="section-label">Quand nous rendre visite</p>
+      <h2 class="section-title">Horaires<br><em>d'ouverture</em></h2>
+      <div class="divider"></div>
+      <table class="horaires-table">
+        <tr id="row-lun"><td>Lundi</td><td class="closed">Fermé</td></tr>
+        <tr id="row-mar"><td>Mardi</td><td>12h00–14h00 &nbsp;·&nbsp; 19h30–22h00</td></tr>
+        <tr id="row-mer"><td>Mercredi</td><td>12h00–14h00 &nbsp;·&nbsp; 19h30–22h00</td> </td></tr>
+        <tr id="row-jeu"><td>Jeudi</td><td>12h00–14h00 &nbsp;·&nbsp; 19h30–22h00</td></tr>
+        <tr id="row-ven"><td>Vendredi</td><td>12h00–14h00 &nbsp;·&nbsp; 19h30–22h30</td></tr>
+        <tr id="row-sam"><td>Samedi</td><td>12h00–14h00 &nbsp;·&nbsp; 19h30–22h30</td></tr>
+        <tr id="row-dim"><td>Dimanche</td><td>12h00–14h00</td></tr>
+      </table>
+    </div>
+    <div class="infos-right reveal" style="transition-delay:0.2s">
+      <div>
+        <p class="info-block-title">Nous trouver</p>
+        <ul class="contact-lines">
+          <li><span class="contact-icon">📍</span><a href="https://maps.google.com" target="_blank">26 Avenue de Flandre, 59290 Wasquehal</a></li>
+          <li><span class="contact-icon">📞</span><a href="tel:0320720547">03 20 72 05 47</a></li>
+          <li><span class="contact-icon">📧</span><a href="mailto:contact@bistroducroise.fr">contact@bistroducroise.fr</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="info-block-title">Moyens de paiement</p>
+        <ul class="paiement-list">
+          <li>Visa</li><li>Mastercard</li><li>American Express</li>
+          <li>Carte Bleue</li><li>Espèces</li><li>Titres restaurant</li>
+          <li>Chèques vacances</li><li>Chèques</li>
+        </ul>
+      </div>
+      <div>
+        <p class="info-block-title">Événements privés</p>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:300;color:var(--text-muted);line-height:1.7">
+          Anniversaires, séminaires, repas de groupe... Contactez-nous pour organiser votre événement avec des formules tout compris.
+        </p>
+        <a href="reservation.html" class="btn-primary" style="margin-top:1.2rem;display:inline-block;font-size:0.7rem">Faire une demande</a>
+      </div>
+    </div>
+  </section>
+
+</head>
 
 <div class="contact">
 
   
   <div class="col">
-    <h2>Adresse</h2>
-    <p>
-      34 Bis rue Bouchers,<br>
-      59800 Lille<br>
-      France
-    </p>
 
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1151.9581045110826!2d3.0569843811455275!3d50.637883385147695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d587391e5413%3A0x67976bc389832a8!2s34%20bis%20Rue%20des%20Bouchers%2C%2059800%20Lille!5e0!3m2!1sfr!2sfr!4v1778055753292!5m2!1sfr!2sfr"
        width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -122,27 +191,198 @@ iframe {
 
   
   <div class="col">
-    <h2>Horaires d'ouverture</h2>
 
-    <table>
-      <tr>
-        <th>Jour</th>
-        <th>Horaires</th>
-      </tr>
-      <tr><td>Lundi</td><td>Fermé</td></tr>
-      <tr><td>Mardi</td><td>09h - 18h</td></tr>
-      <tr><td>Mercredi</td><td>Fermé</td></tr>
-      <tr><td>Jeudi</td><td>09h - 18h</td></tr>
-      <tr><td>Vendredi</td><td>09h - 17h</td></tr>
-      <tr><td>Samedi</td><td>10h - 16h</td></tr>
-      <tr><td>Dimanche</td><td>12h - 22h</td></tr>
-    </table>
   </div>
 
 </div>
 
-<h2>Nous contacter</h2>
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand-name">Le Bistro du Croisé</p>
+        <p class="footer-brand-desc">Cuisine traditionnelle au goût du jour, dans un cadre chaleureux au cœur de Wasquehal depuis plus de dix ans.</p>
+        <a href="https://www.facebook.com" target="_blank" style="color:var(--gold);font-size:0.8rem;font-family:'Jost',sans-serif;text-decoration:none">Facebook →</a>
+      </div>
+      <div>
+        <p class="footer-col-title">Navigation</p>
+        <ul class="footer-links">
+          <li><a href="#about">Le restaurant</a></li>
+          <li><a href="menu.html">Carte & Menus</a></li>
+          <li><a href="galerie.html">Photos</a></li>
+          <li><a href="avis.html">Avis</a></li>
+          <li><a href="infos.html">Accès / Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Infos pratiques</p>
+        <ul class="footer-links">
+          <li><a href="#">Menus groupes</a></li>
+          <li><a href="#">Menu enfant</a></li>
+          <li><a href="#">Menu des fêtes</a></li>
+          <li><a href="#">Événements privés</a></li>
+          <li><a href="reservation.html">Réservation en ligne</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Légal</p>
+        <ul class="footer-links">
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">CGU</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+          <li><a href="#">Politique cookies</a></li>
+          <li><a href="#">Accessibilité</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Le Bistro du Croisé — 26 Avenue de Flandre, 59290 Wasquehal</span>
+      <span>03 20 72 05 47</span>
+    </div>
+  </footer>
 
+
+
+<script>
+    /* ─── Custom Cursor ─── */
+    const cursor     = document.getElementById('cursor');
+    const cursorRing = document.getElementById('cursorRing');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+ 
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      cursor.style.left = mx + 'px';
+      cursor.style.top  = my + 'px';
+    });
+ 
+    (function animRing() {
+      rx += (mx - rx) * 0.12;
+      ry += (my - ry) * 0.12;
+      cursorRing.style.left = rx + 'px';
+      cursorRing.style.top  = ry + 'px';
+      requestAnimationFrame(animRing);
+    })();
+ 
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.style.width = '18px'; cursor.style.height = '18px';
+        cursorRing.style.width = '52px'; cursorRing.style.height = '52px';
+        cursorRing.style.opacity = '0.4';
+      });
+      el.addEventListener('mouseleave', () => {
+        cursor.style.width = '10px'; cursor.style.height = '10px';
+        cursorRing.style.width = '36px'; cursorRing.style.height = '36px';
+        cursorRing.style.opacity = '0.6';
+      });
+    });
+ 
+    /* ─── Navbar scroll ─── */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+ 
+    /* ─── Hero bg load ─── */
+    window.addEventListener('load', () => {
+      document.getElementById('heroBg').classList.add('loaded');
+    });
+ 
+    /* ─── Mobile Menu ─── */
+    document.getElementById('burgerBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.add('open');
+    });
+    document.getElementById('mobileClose').addEventListener('click', closeMobile);
+    function closeMobile() {
+      document.getElementById('mobileMenu').classList.remove('open');
+    }
+ 
+    /* ─── Scroll Reveal ─── */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+ 
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+ 
+    /* ─── Animated counters ─── */
+    function animateCounter(el) {
+      const target  = parseFloat(el.dataset.target);
+      const suffix  = el.dataset.suffix || '';
+      const isFloat = target % 1 !== 0;
+      const duration = 1600;
+      const start    = performance.now();
+ 
+      function step(now) {
+        const t   = Math.min((now - start) / duration, 1);
+        const ease = 1 - Math.pow(1 - t, 3);
+        const val  = target * ease;
+        el.textContent = (isFloat ? val.toFixed(1) : Math.round(val)) + suffix;
+        if (t < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+ 
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          animateCounter(e.target);
+          counterObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+ 
+    document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
+ 
+    /* ─── Today highlight ─── */
+    const dayMap = [null,'lun','mar','mer','jeu','ven','sam','dim'];
+    const todayKey = dayMap[new Date().getDay()];
+    if (todayKey) {
+      const row = document.getElementById('row-' + todayKey);
+      if (row) row.classList.add('today-row');
+    }
+ 
+    /* ─── Avis carousel ─── */
+    const avis = [
+      { text: "Une cuisine d'une générosité rare. La côte de bœuf était tout simplement parfaite, et le service d'une discrétion exemplaire. Je recommande les yeux fermés.", author: "Marie-Claire D.", stars: 5 },
+      { text: "Dîner d'anniversaire magique. Le chef a personnalisé le menu, l'équipe a été aux petits soins toute la soirée. On reviendra pour chaque occasion spéciale.", author: "Thomas & Julie", stars: 5 },
+      { text: "Le foie gras maison est un incontournable. L'ambiance chaleureuse, le décor soigné... c'est exactement ce qu'on attend d'un grand bistrot français.", author: "Bernard L.", stars: 5 },
+      { text: "Repas de groupe pour 20 personnes, organisation impeccable. Le menu tout compris était d'un excellent rapport qualité-prix. Merci à toute l'équipe !", author: "Sylvie M.", stars: 5 },
+      { text: "Enfin un restaurant où l'on prend le temps. Chaque assiette est travaillée avec amour, les vins sont bien conseillés. Un vrai bijou du nord.", author: "Antoine R.", stars: 5 },
+      { text: "Le bar en croûte d'herbes était divin. Service rapide sans être précipité. La salle est agréable, lumineuse. On se sent vraiment bien ici.", author: "Caroline F.", stars: 4 },
+      { text: "Séminaire d'entreprise très réussi. Cadre parfait, repas raffiné, équipe à l'écoute. Un grand merci à Djamel et son équipe pour leur professionnalisme.", author: "Jean-Paul V.", stars: 5 },
+      { text: "Le moelleux au chocolat… On n'en parle plus, on y retourne juste pour ça. Et pour le reste aussi, évidemment !", author: "Isabelle T.", stars: 5 },
+    ];
+ 
+    const track = document.getElementById('avisTrack');
+    const allAvis = [...avis, ...avis]; // double pour boucle infinie
+ 
+    allAvis.forEach(a => {
+      const card = document.createElement('div');
+      card.className = 'avis-card';
+      card.innerHTML = `
+        <div class="stars">${'★'.repeat(a.stars)}${'☆'.repeat(5 - a.stars)}</div>
+        <p class="avis-text">"${a.text}"</p>
+        <p class="avis-author">${a.author}</p>
+      `;
+      track.appendChild(card);
+    });
+ 
+    /* ─── Smooth anchor scroll ─── */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+<!--
 <form>
   <input type="text" name="nom" placeholder="Votre nom" required>
   
@@ -152,6 +392,6 @@ iframe {
   
   <button type="submit">Envoyer</button>
 </form>
-
+-->
 </body>
 </html>
