@@ -1,13 +1,156 @@
-main{ 
-    box-sizing: border-box;
-    width: 600px;
-    margin: 25% 25% 30% 30%;  /* top right bottom left (sens horaire) */
-    padding: 25px 20px 25px 25px ;
-    border: 3px solid;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
+ 
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+  background-color: brown;
+}
+ 
+header {
+  height: 250px;
+ border: 2px solid black;
+  background-position: center;
+  opacity: 0.85;
+}
+ 
+main {
+  width: 90%;
+  max-width: 860px;
+  margin: 10px auto 60px auto;
+  background: white;
+  border-radius: 40px;
+  overflow: hidden;
+}
+ 
+fieldset {
+  border: none;
+  padding: 0;
+}
+ 
 legend {
-  background-color: black;
+  background: white;
+  color: black;
+  padding: 40px 50px 30px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+ 
+legend h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px black;
+}
+ 
+.titre_formulaire {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  
+}
+ 
+
+form > fieldset > *:not(legend):not(button) {
+  display: block;
+}
+ 
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  margin: 24px 50px 8px;
+}
+ 
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  display: block;
+  width: 80%;
+  margin: 0 50px;
+  padding: 12px 16px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #333;
+  background: white;
+  transition: border-color 0.2s;
+  
+}
+ 
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: brown;
+}
+ 
+
+.nom-row {
+  display: flex;
+  gap: 16px;
+  margin: 0 50px;
+}
+ 
+.nom-row input {
+  flex: 1;
+  margin: 0;
+  width: auto;
+}
+ 
+.nom-row .field-label {
+  font-size: 0.78rem;
+  color: brown;
+  margin: 6px 0 0;
+}
+ 
+textarea {
+  resize: vertical;
+  min-height: 50px;
+}
+ 
+select {
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  cursor: pointer;
+}
+ 
+button[type="submit"] {
+  display: block;
+  margin: 32px 50px 40px;
+  padding: 14px 40px;
+  background: #1a1a1a;
   color: white;
-  padding: 3px 6px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+ 
+button[type="submit"]:hover {
+  background: brown;
+}
+ 
+footer {
+  height: 40px;
+}
+img{
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.header{
+  background-image: url('https://woody.cloudly.space/app/uploads/lille-tourisme/2023/12/thumbs/The-ViewLaurent-Javoy-8-min-640x640-crop-1701426364.jpg');
 }

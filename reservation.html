@@ -7,9 +7,10 @@
              <link rel="stylesheet" href="stylereservation.css">
       </head>
       <body>
-            <header>
+            <header class="header">
             </header>
             <main>
+                  
                   <form action="/submit" method="post">
                         <fieldset>
                               <legend><h1>Réservation de Table</h1>
@@ -23,7 +24,8 @@
 
                               <label for="tel">Téléphone :</label>
                               <input type="tel" id="tel" name="tel"
-                                      pattern="[0-9]{10}"
+            
+                              pattern="[0-9]{10}"
                                       placeholder="0612345678" required>
 
                               <label for="convives">Nombre de convives</label>
