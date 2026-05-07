@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+      <head>
+             <meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <title>Reservation</title>
+             <link rel="stylesheet" href="stylereservation.css">
+      </head>
+      <body>
+            <header>
+            </header>
+            <main>
+                  <form action="/submit" method="post">
+                        <fieldset>
+                              <legend><h1>Réservation de Table</h1>
+                              <p class="titre_formulaire">Merci de remplir ce formulaire pour nous permettre de vous offrir le meilleur service ! ... Bienvenue !</p></legend>
+                              <label for="nom">Nom</label>
+                              <input type="text" id="nom" name="nom" required>
+                              <input type="text" id="prenom" name="prenom" required>
+
+                              <label for="email">Email :</label>
+                              <input type="email" id="email" name="email" placeholder="exmple@exemple.com" required>
+
+                              <label for="tel">Téléphone :</label>
+                              <input type="tel" id="tel" name="tel"
+                                      pattern="[0-9]{10}"
+                                      placeholder="0612345678" required>
+
+                              <label for="convives">Nombre de convives</label>
+                              <input type="number" id="convive" name="convive" min="1" max="20" required>  
+                              
+                              <label for="reservation">Réservation</label>
+                              <input type="date" id="reservation" name="reservation"
+                              min="07/05/2026" max="14/05/2026" required>
+
+                              <label for="horaire">Horaire :</label>
+                              <select id="heure" name="heure" required>
+                                    <option value="">--choisir une heure--</option>
+                                    <option value="1">13:00</option>
+                                    <option value="2">14:00</option>
+                                    <option value="3">15:00</option>
+                                    <option value="4">16:00</option>
+                                    <option value="5">19:00</option>
+                                    <option value="6">20:00</option>
+                                    <option value="7">21:00</option>
+                                    <option value="8">22:00</option>
+                                    <option value="9">23:00</option>
+                              </select>
+
+                              <label for="type_de_reservation">Type de réservation :</label>
+                              <select id="type_reservation" name="type_reservation" required>
+                                    <option value="">--Veuillez faire un choix--</option>
+                                    <option value="1">Dîner</option>
+                                    <option value="2">Aniversaire</option>
+                                    <option value="3">Privé</option>
+                                    <option value="4">Déjeuner</option>
+                              </select>
+
+                              <label for="message1">Si autre, préciser :</label>
+                              <textarea id="message1" name="message1"
+                                         rows="2" cols="25" maxlength="250"
+                                         placeholder="Votre message ici..." ></textarea>
+
+                              <label for="message2">Requêtes particulières :</label>
+                              <textarea id="message2" name="message2"
+                                         rows="2" cols="30" maxlength="500"
+                                         placeholder="Votre message ici..." ></textarea>
+                                      
+                              <button type="submit">Envoyer</button>           
+
+                        </fieldset>
+                  </form>
+            </main>
+            <footer></footer>
+      </body>
+</html>
