@@ -1,54 +1,326 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="carre">
-        <div class="text">
-        <h1>Bistrot-Resto</h1>
-        <h2>l'art de la gastronomie à votre table. Ici, tout le monde se sent chez soi. </h2>
-        </div>
+<html lang="fr">
+      <head>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+         <title>Le Bistro le Retro</title>
+         <link rel="preconnect" href="https://fonts.googleapis.com" />
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+         <link rel="stylesheet" href="style.css">
+      </head>
+      
+     
+ <body>
+      <header> 
+              <!-- Custom Cursor -->
+           
+            <div class="cursor-ring" id="cursorRing"></div>
+            <!--Barre de Navigation-->
+            <nav id="navbar">
+                  <a href="index.html" class="nav-logo"><img src="logo_bistro.jpg" alt="logo bistro"> </a>
+                  <ul class="nav-links">
+                        <li><a href="menu.html">MENU</a></li>
+                        <li><a href="galerie.html">PHOTOS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                  </ul>
+                   <a href="reservation.html" class="nav-cta">Réserver</a>
+                   <button class="nav-burger" id="burgerBtn" aria-label="Menu">
+                             <span></span><span></span><span></span>
+                   </button>
+            </nav>
+
+              <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <a href="menu.html" onclick="closeMobile()">Menus</a>
+    <a href="galerie.html" onclick="closeMobile()">Photos</a>
+    <a href="avis.html" onclick="closeMobile()">Avis</a>
+    <a href="contact.html" onclick="closeMobile()">Contact</a>
+    <a href="reservation.html" class="btn-primary" style="font-size:0.8rem">Réserver une table</a>
+  </div>
+ 
+      </header> 
+            
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-grain"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Restaurant · Wasquehal · Nord</p>
+      <h1 class="hero-title">
+        Le Bistro<br>
+        <em>du Croisé</em>
+      </h1>
+      <p class="hero-subtitle">Cuisine traditionnelle au goût du jour — Générosité & Finesse</p>
+      <div class="hero-actions">
+        <a href="reservation.html" class="btn-primary">Réserver une table</a>
+        <a href="menu.html" class="btn-ghost">Découvrir la carte</a>
+      </div>
     </div>
-    
+    <div class="hero-scroll">
+      <span>Découvrir</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
+             <!-- introduction histoire-->
+            <section class="intro" id="about">
+                  <div class="intro-text reveal">
+                        <p class="section-label">Notre histoire</p>
+                        <h2 class="section-title">Un lieu où la<br><em>tradition</em> rencontre<br>la finesse</h2>
+                        <div class="divider"></div>
+                        <p>Un décor <strong>chaleureux et accueillant</strong>, un service attentif et discret. Le Bistro du Croisé vous propose une cuisine traditionnelle revisitée, où la générosité des plats du terroir se mêle à la finesse de nouvelles saveurs.</p>
+                        <p>Renommé pour ses <strong>viandes maturées</strong> comme pour ses <strong>poissons de saison</strong>, notre chef compose chaque semaine une carte qui reflète le meilleur du marché local.</p>
+                        <p>Le Bistro du Croisé, c'est aussi l'organisation de vos <strong>événements privés</strong> : anniversaires, séminaires, repas de groupe — avec des menus tout compris sur mesure.</p>
+                        <a href="menu.html" class="btn-primary" style="margin-top:1.5rem; display:inline-block">Voir la carte</a>
+                  </div>
+                  <div class="intro-img-wrap reveal" style="transition-delay:0.2s">
+                        <img
+                           src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&q=80"
+                           alt="L'intérieur du bistro"
+                           loading="lazy"
+                        />
+                  <div class="intro-img-badge">
+                        <span class="badge-year">10+</span>
+                        <span class="badge-text">Années de passion</span>
+                  </div>
+                  </div>
+            </section>           
+            
+            <!-- prévisualisation du menu-->
+             <section class="menu-section" id="menu">
+                  <div class="menu-header reveal">
+                        <p class="section-label">Nos suggestions</p>
+                        <h2 class="section-title">Une carte qui<br><em>éveille</em> les sens</h2>
+                        <div class="divider center"></div>
+                   </div>
+                   <div class="menu-grid">
+                        <div class="menu-card reveal">
+                              <span class="menu-card-icon">🌿</span>
+                              <h3 class="menu-card-title">Entrées</h3>
+                              <p class="menu-card-desc">Les produits du terroir à l'honneur pour ouvrir les papilles.</p>
+                              <div class="menu-item"><span class="menu-item-name">Foie gras de canard maison, chutney de figues</span><span class="menu-item-price">16 €</span></div>
+                        </div>
+                        <div class="menu-card reveal" style="transition-delay:0.15s">
+                              <span class="menu-card-icon">🥩</span>
+                              <h3 class="menu-card-title">Plats</h3>
+                              <p class="menu-card-desc">Viandes maturées et poissons du jour, à la perfection.</p>
+                              <div class="menu-item"><span class="menu-item-name">Côte de bœuf maturée 45 jours (300g)</span><span class="menu-item-price">16 €</span></div>
+                        </div>
+                        <div class="menu-card reveal" style="transition-delay:0.3s">
+                              <span class="menu-card-icon">🍮</span>
+                              <h3 class="menu-card-title">Desserts</h3>
+                              <p class="menu-card-desc">Des fins de repas qui laissent un souvenir impérissable.</p>
+                              <div class="menu-item"><span class="menu-item-name">Crème brûlée à la vanille bourbon</span><span class="menu-item-price">16 €</span></div>
+                        </div>
+                   </div>
+                   <div class="menu-cta reveal">
+                        <a href="menu.html" class="btn-primary">Consulter la carte complète</a>
+                   </div>
+             </section>
 
+             <!-- Avis clients-->
+            <section class="avis-section" id="avis">
+                  <div class="avis-header reveal">
+                       <p class="section-label">Ce qu'ils disent</p>
+                       <h2 class="section-title" style="color:var(--white)">Nos clients<br><em>témoignent</em></h2>
+                       <div class="divider center" style="background:rgba(201,168,76,0.4)"></div>
+                  </div>
+                  <div class="avis-track-outer reveal">
+                       <div class="avis-track" id="avisTrack"> 
+                          <!-- Cards doubled for seamless loop -->
+                       </div>
+                  </div>
+            </section> 
+      
 
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand-name">Le Bistro du Croisé</p>
+        <p class="footer-brand-desc">Cuisine traditionnelle au goût du jour, dans un cadre chaleureux au cœur de Wasquehal depuis plus de dix ans.</p>
+        <a href="https://www.facebook.com" target="_blank" style="color:var(--gold);font-size:0.8rem;font-family:'Jost',sans-serif;text-decoration:none">Facebook →</a>
+        <a href="https://www.instagram.com" target="_blank" style="color:var(--gold);font-size:0.8rem;font-family:'Jost',sans-serif;text-decoration:none">Instagram →</a>
+        <a href="https://www.Tiktok.com" target="_blank" style="color:var(--gold);font-size:0.8rem;font-family:'Jost',sans-serif;text-decoration:none">TikTok→</a>
+      </div>
+      <div>
+        <p class="footer-col-title">Navigation</p>
+        <ul class="footer-links">
+          <li><a href="#about">Le restaurant</a></li>
+          <li><a href="#menu">Carte & Menus</a></li>
+          <li><a href="#galerie">Photos</a></li>
+          <li><a href="#avis">Avis</a></li>
+          <li><a href="#infos">Accès / Contact</a></li>
+        </ul>
+      </div>
 
+      <div>
+        <p class="footer-col-title">Légal</p>
+        <ul class="footer-links">
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">CGU</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+          <li><a href="#">Politique cookies</a></li>
+          <li><a href="#">Accessibilité</a></li>
+        </ul>
+      </div>
+                   <div>
+                        <p class="footer-col-title">Nous trouver</p>
+                        <ul class="footer-links">
+                              <li><span class="contact-icon">📍</span><a href="tel:0320720547">26 Avenue de Flandre, 59290 Wasquehal</a></li>
+                               <li><span class="contact-icon">📞</span><a href="tel:0320720547">03 20 72 05 47</a></li>
+                               <li><span class="contact-icon">📧</span><a href="mailto:contact@bistroducroise.fr">contact@bistroducroise.fr</a></li>
+                        </ul>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1151.9581045110826!2d3.0569843811455275!3d50.637883385147695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d587391e5413%3A0x67976bc389832a8!2s34%20bis%20Rue%20des%20Bouchers%2C%2059800%20Lille!5e0!3m2!1sfr!2sfr!4v1778055753292!5m2!1sfr!2sfr"
+                         width="250" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+    </div>
 
+  </footer>
+            
+   <script>
+    /* ─── Custom Cursor ─── */
+    const cursor     = document.getElementById('');
+    const cursorRing = document.getElementById('cursorRing');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+ 
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      cursor.style.left = mx + 'px';
+      cursor.style.top  = my + 'px';
+    });
+ 
+    (function animRing() {
+      rx += (mx - rx) * 0.12;
+      ry += (my - ry) * 0.12;
+      cursorRing.style.left = rx + 'px';
+      cursorRing.style.top  = ry + 'px';
+      requestAnimationFrame(animRing);
+    })();
+ 
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.style.width = '18px'; cursor.style.height = '18px';
+        cursorRing.style.width = '52px'; cursorRing.style.height = '52px';
+        cursorRing.style.opacity = '0.4';
+      });
+      el.addEventListener('mouseleave', () => {
+        cursor.style.width = '10px'; cursor.style.height = '10px';
+        cursorRing.style.width = '36px'; cursorRing.style.height = '36px';
+        cursorRing.style.opacity = '0.6';
+      });
+    });
+ 
+    /* ─── Navbar scroll ─── */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+ 
+    /* ─── Hero bg load ─── */
+    window.addEventListener('load', () => {
+      document.getElementById('heroBg').classList.add('loaded');
+    });
+ 
+        /* ─── Mobile Menu ─── */
+    document.getElementById('burgerBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.add('open');
+    });
+    document.getElementById('mobileClose').addEventListener('click', closeMobile);
+    function closeMobile() {
+      document.getElementById('mobileMenu').classList.remove('open');
+    }
+ 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    /* ─── Scroll Reveal ─── */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+ 
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+ 
+    /* ─── Animated counters ─── */
+    function animateCounter(el) {
+      const target  = parseFloat(el.dataset.target);
+      const suffix  = el.dataset.suffix || '';
+      const isFloat = target % 1 !== 0;
+      const duration = 1600;
+      const start    = performance.now();
+ 
+      function step(now) {
+        const t   = Math.min((now - start) / duration, 1);
+        const ease = 1 - Math.pow(1 - t, 3);
+        const val  = target * ease;
+        el.textContent = (isFloat ? val.toFixed(1) : Math.round(val)) + suffix;
+        if (t < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+ 
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          animateCounter(e.target);
+          counterObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+ 
+    document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
+ 
+    /* ─── Today highlight ─── */
+    const dayMap = [null,'lun','mar','mer','jeu','ven','sam','dim'];
+    const todayKey = dayMap[new Date().getDay()];
+    if (todayKey) {
+      const row = document.getElementById('row-' + todayKey);
+      if (row) row.classList.add('today-row');
+    }
+ 
+    /* ─── Avis carousel ─── */
+    const avis = [
+      { text: "Une cuisine d'une générosité rare. La côte de bœuf était tout simplement parfaite, et le service d'une discrétion exemplaire. Je recommande les yeux fermés.", author: "Marie-Claire D.", stars: 5 },
+      { text: "Dîner d'anniversaire magique. Le chef a personnalisé le menu, l'équipe a été aux petits soins toute la soirée. On reviendra pour chaque occasion spéciale.", author: "Thomas & Julie", stars: 5 },
+      { text: "Le foie gras maison est un incontournable. L'ambiance chaleureuse, le décor soigné... c'est exactement ce qu'on attend d'un grand bistrot français.", author: "Bernard L.", stars: 5 },
+      { text: "Repas de groupe pour 20 personnes, organisation impeccable. Le menu tout compris était d'un excellent rapport qualité-prix. Merci à toute l'équipe !", author: "Sylvie M.", stars: 5 },
+      { text: "Enfin un restaurant où l'on prend le temps. Chaque assiette est travaillée avec amour, les vins sont bien conseillés. Un vrai bijou du nord.", author: "Antoine R.", stars: 5 },
+      { text: "Le bar en croûte d'herbes était divin. Service rapide sans être précipité. La salle est agréable, lumineuse. On se sent vraiment bien ici.", author: "Caroline F.", stars: 4 },
+      { text: "Séminaire d'entreprise très réussi. Cadre parfait, repas raffiné, équipe à l'écoute. Un grand merci à Djamel et son équipe pour leur professionnalisme.", author: "Jean-Paul V.", stars: 5 },
+      { text: "Le moelleux au chocolat… On n'en parle plus, on y retourne juste pour ça. Et pour le reste aussi, évidemment !", author: "Isabelle T.", stars: 5 },
+    ];
+ 
+    const track = document.getElementById('avisTrack');
+    const allAvis = [...avis, ...avis]; // double pour boucle infinie
+ 
+    allAvis.forEach(a => {
+      const card = document.createElement('div');
+      card.className = 'avis-card';
+      card.innerHTML = `
+        <div class="stars">${'★'.repeat(a.stars)}${'☆'.repeat(5 - a.stars)}</div>
+        <p class="avis-text">"${a.text}"</p>
+        <p class="avis-author">${a.author}</p>
+      `;
+      track.appendChild(card);
+    });
+ 
+    /* ─── Smooth anchor scroll ─── */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>           
 </body>
+
 </html>
