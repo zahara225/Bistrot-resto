@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+      <head>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+         <title>Le Bistro le Retro</title>
+         <link rel="preconnect" href="https://fonts.googleapis.com" />
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+         <link rel="stylesheet" href="style.css">
+      </head>
+
+  <body>    
+      <header> 
+
+                          <!-- Custom Cursor -->
+           
+            <div class="cursor-ring" id="cursorRing"></div>
+            <!--Barre de Navigation-->
+            <nav id="navbar">
+                  <a href="index.html" class="nav-logo"><img src="logo_bistro.jpg" alt="logo bistro" loading="lazy"> </a>
+                  <ul class="nav-links">
+                        <li><a href="menu.html">MENU</a></li>
+                        <li><a href="galerie.html">PHOTOS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                  </ul>
+                   <a href="reservation.html" class="nav-cta">Réserver</a>
+                   <button class="nav-burger" id="burgerBtn" aria-label="Menu">
+                             <span></span><span></span><span></span>
+                   </button>
+            </nav>
+
+
+
+              <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <a href="menu.html" onclick="closeMobile()">Menus</a>
+    <a href="galerie.html" onclick="closeMobile()">Photos</a>
+    <a href="avis.html" onclick="closeMobile()">Avis</a>
+    <a href="contact.html" onclick="closeMobile()">Contact</a>
+    <a href="reservation.html" class="btn-primary" style="font-size:0.8rem">Réserver une table</a>
+  </div>
+ 
+      </header>  
+
+            <!-- Horaires & Infos -->
+            <section class="infos-section" id="infoscontact">
+                   <div class="reveal">
+                        <p class="section-label">Quand nous rendre visite</p>
+                        <h2 class="section-title">Horaires<br><em>d'ouverture</em></h2>
+                   <div class="divider"></div>
+                   <table class="horaires-table">
+                        <tr id="row-lun"><td>Lundi</td><td class="closed">Fermé</td></tr>
+                        <tr id="row-mar"><td>Mardi</td><td>12h00–14h00 &nbsp;·&nbsp; 19h30–22h00</td></tr>
+                        <tr id="row-mer"><td>Mercredi</td><td>12h00–14h00 &nbsp;·&nbsp; 19h30–22h00</td> </td></tr>
+                        <tr id="row-jeu"><td>Jeudi</td><td>12h00–14h00 &nbsp;·&nbsp; 19h30–22h00</td></tr>
+                        <tr id="row-ven"><td>Vendredi</td><td>12h00–14h00 &nbsp;·&nbsp; 19h30–22h30</td></tr>
+                        <tr id="row-sam"><td>Samedi</td><td>12h00–14h00 &nbsp;·&nbsp; 19h30–22h30</td></tr>
+                        <tr id="row-dim"><td>Dimanche</td><td>12h00–14h00</td></tr>
+                   </table>
+                   </div>
+                   <div class="infos-right reveal" style="transition-delay:0.2s">
+                         <div>
+                               <p class="info-block-title">Nous trouver</p>
+                               <ul class="contact-lines">
+                                     <li><span class="contact-icon">📍</span><a href="https://maps.google.com" target="_blank">26 Avenue de Flandre, 59290 Wasquehal</a></li>
+                                     <li><span class="contact-icon">📞</span><a href="tel:0320720547">03 20 72 05 47</a></li>
+                                     <li><span class="contact-icon">📧</span><a href="mailto:contact@bistroducroise.fr">contact@bistroducroise.fr</a></li>
+                               </ul>
+                         </div>
+                         <div>
+                              <form action="/submit" method="post">
+                                   <fieldset>
+                                          <legend><h1>nous contacter</h1>
+                                          <p class="titre_formulaire">Merci de remplir ce formulaire pour nous joindre et nous permettre de vous offrir le meilleur service !</p></legend>
+                                          <label for="nom">Nom</label>
+                                          <input type="text" id="nom" name="nom" required>
+
+                                          <label for="prenom">Prénom</label>
+                                          <input type="text" id="prenom" name="prenom" required>
+
+                                          <label for="email">Email :</label>
+                                          <input type="email" id="email" name="email" placeholder="exmple@exemple.com" required>
+
+                                          <label for="tel">Téléphone :</label>
+                                          <input type="tel" id="tel" name="tel"
+                                                pattern="[0-9]{10}"
+                                                placeholder="0612345678" required>
+
+                                          <label for="message-contact">Veuillez écrire votre message ici :</label>
+                                          <textarea id="messagecontact" name="message-contact"
+                                                rows="2" cols="50" maxlength="500"
+                                                placeholder="Votre message ici..." ></textarea>
+                                                
+                                          <button type="submit">Envoyer</button>           
+
+                                    </fieldset>
+                              </form>
+                         </div>
+                   </div>
+            </section>
+
+            <section class="maps-contact">
+                    <div class="col">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1151.9581045110826!2d3.0569843811455275!3d50.637883385147695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d587391e5413%3A0x67976bc389832a8!2s34%20bis%20Rue%20des%20Bouchers%2C%2059800%20Lille!5e0!3m2!1sfr!2sfr!4v1778055753292!5m2!1sfr!2sfr"
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+            </section>
+      
+
+   <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand-name">Le Bistro du Croisé</p>
+        <p class="footer-brand-desc">Cuisine traditionnelle au goût du jour, dans un cadre chaleureux au cœur de Wasquehal depuis plus de dix ans.</p>
+        <a href="https://www.facebook.com" target="_blank" style="color:var(--gold);font-size:0.8rem;font-family:'Jost',sans-serif;text-decoration:none">Facebook →</a>
+        <a href="https://www.instagram.com" target="_blank" style="color:var(--gold);font-size:0.8rem;font-family:'Jost',sans-serif;text-decoration:none">Instagram →</a>
+        <a href="https://www.Tiktok.com" target="_blank" style="color:var(--gold);font-size:0.8rem;font-family:'Jost',sans-serif;text-decoration:none">TikTok→</a>
+      </div>
+      <div>
+        <p class="footer-col-title">Navigation</p>
+        <ul class="footer-links">
+          <li><a href="#about">Le restaurant</a></li>
+          <li><a href="#menu">Carte & Menus</a></li>
+          <li><a href="#galerie">Photos</a></li>
+          <li><a href="#avis">Avis</a></li>
+          <li><a href="#infos">Accès / Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Légal</p>
+        <ul class="footer-links">
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">CGU</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+          <li><a href="#">Politique cookies</a></li>
+          <li><a href="#">Accessibilité</a></li>
+        </ul>
+      </div>
+                   <div>
+                        <p class="footer-col-title">Nous trouver</p>
+                        <ul class="footer-links">
+                              <li><span class="contact-icon">📍</span><a href="tel:0320720547">26 Avenue de Flandre, 59290 Wasquehal</a></li>
+                               <li><span class="contact-icon">📞</span><a href="tel:0320720547">03 20 72 05 47</a></li>
+                               <li><span class="contact-icon">📧</span><a href="mailto:contact@bistroducroise.fr">contact@bistroducroise.fr</a></li>
+                        </ul>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1151.9581045110826!2d3.0569843811455275!3d50.637883385147695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d587391e5413%3A0x67976bc389832a8!2s34%20bis%20Rue%20des%20Bouchers%2C%2059800%20Lille!5e0!3m2!1sfr!2sfr!4v1778055753292!5m2!1sfr!2sfr"
+                         width="250" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+    </div>
+
+  </footer>
+
+  <script>
+
+        /* ─── Custom Cursor ─── */
+    const cursor     = document.getElementById('');
+    const cursorRing = document.getElementById('cursorRing');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+ 
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      cursor.style.left = mx + 'px';
+      cursor.style.top  = my + 'px';
+    });
+ 
+    (function animRing() {
+      rx += (mx - rx) * 0.12;
+      ry += (my - ry) * 0.12;
+      cursorRing.style.left = rx + 'px';
+      cursorRing.style.top  = ry + 'px';
+      requestAnimationFrame(animRing);
+    })();
+ 
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.style.width = '18px'; cursor.style.height = '18px';
+        cursorRing.style.width = '52px'; cursorRing.style.height = '52px';
+        cursorRing.style.opacity = '0.4';
+      });
+      el.addEventListener('mouseleave', () => {
+        cursor.style.width = '10px'; cursor.style.height = '10px';
+        cursorRing.style.width = '36px'; cursorRing.style.height = '36px';
+        cursorRing.style.opacity = '0.6';
+      });
+    });
+
+        /* ─── Navbar scroll ─── */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+ 
+              /* ─── Mobile Menu ─── */
+    document.getElementById('burgerBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.add('open');
+    });
+    document.getElementById('mobileClose').addEventListener('click', closeMobile);
+    function closeMobile() {
+      document.getElementById('mobileMenu').classList.remove('open');
+    }
+
+    /* ─── Scroll Reveal ─── */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+ 
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+ 
+    /* ─── Animated counters ─── */
+    function animateCounter(el) {
+      const target  = parseFloat(el.dataset.target);
+      const suffix  = el.dataset.suffix || '';
+      const isFloat = target % 1 !== 0;
+      const duration = 1600;
+      const start    = performance.now();
+ 
+      function step(now) {
+        const t   = Math.min((now - start) / duration, 1);
+        const ease = 1 - Math.pow(1 - t, 3);
+        const val  = target * ease;
+        el.textContent = (isFloat ? val.toFixed(1) : Math.round(val)) + suffix;
+        if (t < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+ 
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          animateCounter(e.target);
+          counterObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+ 
+    document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
+ 
+    /* ─── Today highlight ─── */
+    const dayMap = [null,'lun','mar','mer','jeu','ven','sam','dim'];
+    const todayKey = dayMap[new Date().getDay()];
+    if (todayKey) {
+      const row = document.getElementById('row-' + todayKey);
+      if (row) row.classList.add('today-row');
+    }
+
+        /* ─── Smooth anchor scroll ─── */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+   </body>          
+</html>
