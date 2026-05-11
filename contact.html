@@ -1,157 +1,151 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-<meta charset="UTF-8">
-<title>Contact</title>
+      <head>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+         <title>Le Bistro le Retro</title>
+         <link rel="preconnect" href="https://fonts.googleapis.com" />
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+         <link rel="stylesheet" href="style.css">
+      </head>
 
-<style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-}
+  <body>    
+      <header> 
+            <!--Barre de Navigation-->
+            <nav id="navbar">
+                  <a href="index.html" class="nav-logo"><img src="logo_bistro.jpg" alt="logo bistro" loading="lazy"> </a>
+                  <ul class="nav-links">
+                        <li><a href="menu.html">MENU</a></li>
+                        <li><a href="galerie.html">PHOTOS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                  </ul>
+                   <a href="reservation.html" class="nav-cta">Réserver</a>
+                   <button class="nav-burger" id="burgerBtn" aria-label="Menu">
+                             <span></span><span></span><span></span>
+                   </button>
+            </nav>
 
-.contact {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-
-.col {
-  flex: 1;
-  min-width: 800px;
-}
-
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-th, td {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-th {
-  background: #f5f5f5;
-  text-align: left;
-}
-
-tr:hover {
-  background: #fafafa;
-}
-
-
-form {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-input, textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  padding: 10px;
-  border: none;
-  background:brown;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background:brown;
-}
-
-iframe {
-  width: 100%;
-  height: 300px;
-  border: 0;
-  margin-top: 20px;
-}
-
-@media (max-width:768px) {
-      .container {
-        flex-direction: column;
-      }
-
-      body {
-        padding: 15px;
-      }
-
-      table {
-        font-size: 15px;
-        height: 10%;
-        width: 50%;
-      }
-
-      iframe {
-        height: 50%;
-        width: 60%;
-      }
-    }
-
-</style>
-
-</head>
-<body>
-
-<h1>Contact</h1>
-
-<div class="contact">
-
-  
-  <div class="col">
-    <h2>Adresse</h2>
-    <p>
-      34 Bis rue Bouchers,<br>
-      59800 Lille<br>
-      France
-    </p>
-
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1151.9581045110826!2d3.0569843811455275!3d50.637883385147695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d587391e5413%3A0x67976bc389832a8!2s34%20bis%20Rue%20des%20Bouchers%2C%2059800%20Lille!5e0!3m2!1sfr!2sfr!4v1778055753292!5m2!1sfr!2sfr"
-       width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <a href="menu.html" onclick="closeMobile()">Menus</a>
+    <a href="galerie.html" onclick="closeMobile()">Photos</a>
+    <a href="avis.html" onclick="closeMobile()">Avis</a>
+    <a href="contact.html" onclick="closeMobile()">Contact</a>
+    <a href="reservation.html" class="btn-primary" style="font-size:0.8rem">Réserver une table</a>
   </div>
+ 
+      </header>  
 
-  
-  <div class="col">
-    <h2>Horaires d'ouverture</h2>
+            <!-- Horaires & Infos -->
+            <section class="infos-section" id="infoscontact">
+                   <div class="reveal">
+                        <p class="section-label">Quand nous rendre visite</p>
+                        <h2 class="section-title">Horaires<br><em>d'ouverture</em></h2>
+                   <div class="divider"></div>
+                   <table class="horaires-table">
+                        <tr id="row-lun"><td>Lundi</td><td class="closed">Fermé</td></tr>
+                        <tr id="row-mar"><td>Mardi</td><td>12h00–14h00 &nbsp;·&nbsp; 19h30–22h00</td></tr>
+                        <tr id="row-mer"><td>Mercredi</td><td>12h00–14h00 &nbsp;·&nbsp; 19h30–22h00</td> </td></tr>
+                        <tr id="row-jeu"><td>Jeudi</td><td>12h00–14h00 &nbsp;·&nbsp; 19h30–22h00</td></tr>
+                        <tr id="row-ven"><td>Vendredi</td><td>12h00–14h00 &nbsp;·&nbsp; 19h30–22h30</td></tr>
+                        <tr id="row-sam"><td>Samedi</td><td>12h00–14h00 &nbsp;·&nbsp; 19h30–22h30</td></tr>
+                        <tr id="row-dim"><td>Dimanche</td><td>12h00–14h00</td></tr>
+                   </table>
+                   </div>
+                   <div class="infos-right reveal" style="transition-delay:0.2s">
+                         <div>
+                               <p class="info-block-title">Nous trouver</p>
+                               <ul class="contact-lines">
+                                     <li><span class="contact-icon">📍</span><a href="https://maps.google.com" target="_blank">26 Avenue de Flandre, 59290 Wasquehal</a></li>
+                                     <li><span class="contact-icon">📞</span><a href="tel:0320720547">03 20 72 05 47</a></li>
+                                     <li><span class="contact-icon">📧</span><a href="mailto:contact@bistroducroise.fr">contact@bistroducroise.fr</a></li>
+                               </ul>
+                         </div>
+                         <div>
+                              <form action="/submit" method="post">
+                                   <fieldset>
+                                          <legend><h1>nous contacter</h1>
+                                          <p class="titre_formulaire">Merci de remplir ce formulaire pour nous joindre et nous permettre de vous offrir le meilleur service !</p></legend>
+                                          <label for="nom">Nom</label>
+                                          <input type="text" id="nom" name="nom" required>
 
-    <table>
-      <tr>
-        <th>Jour</th>
-        <th>Horaires</th>
-      </tr>
-      <tr><td>Lundi</td><td>Fermé</td></tr>
-      <tr><td>Mardi</td><td>09h - 18h</td></tr>
-      <tr><td>Mercredi</td><td>Fermé</td></tr>
-      <tr><td>Jeudi</td><td>09h - 18h</td></tr>
-      <tr><td>Vendredi</td><td>09h - 17h</td></tr>
-      <tr><td>Samedi</td><td>10h - 16h</td></tr>
-      <tr><td>Dimanche</td><td>12h - 22h</td></tr>
-    </table>
-  </div>
+                                          <label for="prenom">Prénom</label>
+                                          <input type="text" id="prenom" name="prenom" required>
 
-</div>
+                                          <label for="email">Email :</label>
+                                          <input type="email" id="email" name="email" placeholder="exmple@exemple.com" required>
 
-<h2>Nous contacter</h2>
+                                          <label for="tel">Téléphone :</label>
+                                          <input type="tel" id="tel" name="tel"
+                                                pattern="[0-9]{10}"
+                                                placeholder="0612345678" required>
 
-<form>
-  <input type="text" name="nom" placeholder="Votre nom" required>
-  
-  <input type="email" name="email" placeholder="Votre email" required>
-  
-  <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
-  
-  <button type="submit">Envoyer</button>
-</form>
+                                          <label for="message-contact">Veuillez écrire votre message ici :</label>
+                                          <textarea id="messagecontact" name="message-contact"
+                                                rows="2" cols="50" maxlength="500"
+                                                placeholder="Votre message ici..." ></textarea>
+                                                
+                                          <button type="submit">Envoyer</button>           
 
-</body>
+                                    </fieldset>
+                              </form>
+                         </div>
+                   </div>
+            </section>
+
+            <section class="maps-contact">
+                    <div class="col">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1151.9581045110826!2d3.0569843811455275!3d50.637883385147695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d587391e5413%3A0x67976bc389832a8!2s34%20bis%20Rue%20des%20Bouchers%2C%2059800%20Lille!5e0!3m2!1sfr!2sfr!4v1778055753292!5m2!1sfr!2sfr"
+                        width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+            </section>
+      
+
+   <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand-name">Le Bistro du Croisé</p>
+        <p class="footer-brand-desc">Cuisine traditionnelle au goût du jour, dans un cadre chaleureux au cœur de Wasquehal depuis plus de dix ans.</p>
+        <a href="https://www.facebook.com" target="_blank" style="color:var(--gold);font-size:0.8rem;font-family:'Jost',sans-serif;text-decoration:none">Facebook →</a>
+        <a href="https://www.instagram.com" target="_blank" style="color:var(--gold);font-size:0.8rem;font-family:'Jost',sans-serif;text-decoration:none">Instagram →</a>
+        <a href="https://www.Tiktok.com" target="_blank" style="color:var(--gold);font-size:0.8rem;font-family:'Jost',sans-serif;text-decoration:none">TikTok→</a>
+      </div>
+      <div>
+        <p class="footer-col-title">Navigation</p>
+        <ul class="footer-links">
+          <li><a href="#about">Le restaurant</a></li>
+          <li><a href="#menu">Carte & Menus</a></li>
+          <li><a href="#galerie">Photos</a></li>
+          <li><a href="#avis">Avis</a></li>
+          <li><a href="#infos">Accès / Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Légal</p>
+        <ul class="footer-links">
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">CGU</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+          <li><a href="#">Politique cookies</a></li>
+          <li><a href="#">Accessibilité</a></li>
+        </ul>
+      </div>
+                   <div>
+                        <p class="footer-col-title">Nous trouver</p>
+                        <ul class="footer-links">
+                              <li><span class="contact-icon">📍</span><a href="tel:0320720547">26 Avenue de Flandre, 59290 Wasquehal</a></li>
+                               <li><span class="contact-icon">📞</span><a href="tel:0320720547">03 20 72 05 47</a></li>
+                               <li><span class="contact-icon">📧</span><a href="mailto:contact@bistroducroise.fr">contact@bistroducroise.fr</a></li>
+                        </ul>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1151.9581045110826!2d3.0569843811455275!3d50.637883385147695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d587391e5413%3A0x67976bc389832a8!2s34%20bis%20Rue%20des%20Bouchers%2C%2059800%20Lille!5e0!3m2!1sfr!2sfr!4v1778055753292!5m2!1sfr!2sfr"
+                         width="250" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+    </div>
+
+  </footer>
+   </body>          
 </html>
