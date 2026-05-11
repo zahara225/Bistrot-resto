@@ -1,21 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
       <head>
-             <meta charset="UTF-8">
-             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-             <title>Reservation</title>
-             <link rel="stylesheet" href="stylereservation.css">
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+         <title>Le Bistro le Retro</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+         <link rel="stylesheet" href="style.css">
       </head>
-      <body>
-            <header>
-            </header>
-            <main>
-                  <form action="/submit" method="post">
+
+   <body id="reserve"> 
+      <header > 
+            <!--Barre de Navigation-->
+            <nav id="navbar">
+                  <a href="index.html" class="nav-logo"><img src="logo_bistro.jpg" alt="logo bistro" loading="lazy"> </a>
+                  <ul class="nav-links">
+                        <li><a href="menu.html">MENU</a></li>
+                        <li><a href="galerie.html">PHOTOS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                  </ul>
+                   <a href="reservation.html" class="nav-cta">Réserver</a>
+                   <button class="nav-burger" id="burgerBtn" aria-label="Menu">
+                             <span></span><span></span><span></span>
+                   </button>
+            </nav>
+
+              <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <a href="menu.html" onclick="closeMobile()">Menus</a>
+    <a href="galerie.html" onclick="closeMobile()">Photos</a>
+    <a href="avis.html" onclick="closeMobile()">Avis</a>
+    <a href="contact.html" onclick="closeMobile()">Contact</a>
+    <a href="reservation.html" class="btn-primary" style="font-size:0.8rem">Réserver une table</a>
+  </div>
+ 
+      </header> 
+      <div class="formulaire"></div>
+      
+
+                  <form action="/submit" method="post" class="main">
                         <fieldset>
                               <legend><h1>Réservation de Table</h1>
                               <p class="titre_formulaire">Merci de remplir ce formulaire pour nous permettre de vous offrir le meilleur service ! ... Bienvenue !</p></legend>
                               <label for="nom">Nom</label>
                               <input type="text" id="nom" name="nom" required>
+
+                              <label for="prenom">Prénom</label>
                               <input type="text" id="prenom" name="prenom" required>
 
                               <label for="email">Email :</label>
@@ -70,7 +102,51 @@
 
                         </fieldset>
                   </form>
-            </main>
-            <footer></footer>
-      </body>
+      
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand-name">Le Bistro du Croisé</p>
+        <p class="footer-brand-desc">Cuisine traditionnelle au goût du jour, dans un cadre chaleureux au cœur de Wasquehal depuis plus de dix ans.</p>
+        <a href="https://www.facebook.com" target="_blank" style="color:var(--gold);font-size:0.8rem;font-family:'Jost',sans-serif;text-decoration:none">Facebook →</a>
+        <a href="https://www.instagram.com" target="_blank" style="color:var(--gold);font-size:0.8rem;font-family:'Jost',sans-serif;text-decoration:none">Instagram →</a>
+        <a href="https://www.Tiktok.com" target="_blank" style="color:var(--gold);font-size:0.8rem;font-family:'Jost',sans-serif;text-decoration:none">TikTok→</a>
+      </div>
+      <div>
+        <p class="footer-col-title">Navigation</p>
+        <ul class="footer-links">
+          <li><a href="#about">Le restaurant</a></li>
+          <li><a href="#menu">Carte & Menus</a></li>
+          <li><a href="#galerie">Photos</a></li>
+          <li><a href="#avis">Avis</a></li>
+          <li><a href="#infos">Accès / Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Légal</p>
+        <ul class="footer-links">
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">CGU</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+          <li><a href="#">Politique cookies</a></li>
+          <li><a href="#">Accessibilité</a></li>
+        </ul>
+      </div>
+                   <div>
+                        <p class="footer-col-title">Nous trouver</p>
+                        <ul class="footer-links">
+                              <li><span class="contact-icon">📍</span><a href="tel:0320720547">26 Avenue de Flandre, 59290 Wasquehal</a></li>
+                               <li><span class="contact-icon">📞</span><a href="tel:0320720547">03 20 72 05 47</a></li>
+                               <li><span class="contact-icon">📧</span><a href="mailto:contact@bistroducroise.fr">contact@bistroducroise.fr</a></li>
+                        </ul>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1151.9581045110826!2d3.0569843811455275!3d50.637883385147695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d587391e5413%3A0x67976bc389832a8!2s34%20bis%20Rue%20des%20Bouchers%2C%2059800%20Lille!5e0!3m2!1sfr!2sfr!4v1778055753292!5m2!1sfr!2sfr"
+                         width="250" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+    </div>
+
+  </footer>
+   </body>          
 </html>
